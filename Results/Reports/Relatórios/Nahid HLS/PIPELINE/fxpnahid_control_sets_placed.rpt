@@ -1,0 +1,126 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Fri Apr 13 15:16:49 2018
+| Host         : pedro-H170-Gaming-3 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_control_sets -verbose -file fxpnahid_control_sets_placed.rpt
+| Design       : fxpnahid
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    60 |
+| Unused register locations in slices containing registers |   195 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            5414 |         1420 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             331 |          106 |
+| Yes          | No                    | No                     |             388 |          126 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                Enable Signal               |                                                                 Set/Reset Signal                                                                 | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_8_reg_1325_reg0  |                                                                                                                                                  |                2 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_90_reg_1292        |                                                                                                                                                  |                3 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_7_reg_1298_reg0  |                                                                                                                                                  |                3 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_94_reg_1319        |                                                                                                                                                  |                2 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_8_reg_1325_reg0  |                                                                                                                                                  |                2 |              7 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[1]_35[28]                                                |                3 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_7_reg_1298_reg0  |                                                                                                                                                  |                2 |              7 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[1]_35[28]                                                |                3 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_90_reg_1292        |                                                                                                                                                  |                3 |              7 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[1]_34[28]                                                |                3 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_94_reg_1319        |                                                                                                                                                  |                2 |              7 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_82_reg_1238        |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_86_reg_1265        |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_96_reg_1346        |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_6_reg_1271_reg0  |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_96_reg_1346        |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_9_reg_1352_reg0  |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_6_reg_1271_reg0  |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_5_reg_1244_reg0  |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_86_reg_1265        |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_9_reg_1352_reg0  |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_82_reg_1238        |                                                                                                                                                  |                3 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_5_reg_1244_reg0  |                                                                                                                                                  |                2 |              8 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_s_reg_1379_reg0  |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_78_reg_1211        |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_4_reg_1217_reg0  |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_78_reg_1211        |                                                                                                                                                  |                4 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_s_reg_1379_reg0  |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_4_reg_1217_reg0  |                                                                                                                                                  |                2 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_101_reg_1373       |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_101_reg_1373       |                                                                                                                                                  |                3 |              9 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_75_reg_1184        |                                                                                                                                                  |                4 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_3_reg_1190_reg0  |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_1_reg_1406_reg0  |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_105_reg_1428       |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_103_reg_1400       |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_103_reg_1400       |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_105_reg_1428       |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_3_reg_1190_reg0  |                                                                                                                                                  |                2 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_1_reg_1406_reg0  |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_10_reg_1434_reg0 |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_75_reg_1184        |                                                                                                                                                  |                4 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_10_reg_1434_reg0 |                                                                                                                                                  |                3 |             10 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/s_V_1_2_reg_1162_reg0  |                                                                                                                                                  |                3 |             11 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/s_V_1_2_reg_1162_reg0  |                                                                                                                                                  |                3 |             11 |
+|  ap_clk      | grp_fxp_sqrt_fu_126/tmp_72_reg_1156        |                                                                                                                                                  |                5 |             11 |
+|  ap_clk      | grp_fxp_sqrt_fu_131/tmp_72_reg_1156        |                                                                                                                                                  |                5 |             11 |
+|  ap_clk      |                                            | ap_reg_pp0_iter16_isNeg_reg_1193                                                                                                                 |               11 |             12 |
+|  ap_clk      |                                            | ap_reg_pp0_iter16_isNeg_1_reg_1209                                                                                                               |               12 |             12 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[0].remd_tmp[1][19]_i_1__1_n_0                               |                4 |             12 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[0].remd_tmp[1][19]_i_1__0_n_0                               |                4 |             12 |
+|  ap_clk      |                                            | fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[0].remd_tmp[1][19]_i_1_n_0                                  |                4 |             12 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CARRYS_OUT[1]                         |                8 |             16 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/opt_has_pipe.first_q_reg[48]          |                5 |             16 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/norm_dist_skew[1]                     |                6 |             16 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/opt_has_pipe.first_q_reg[48]          |                2 |             16 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50] |                8 |             51 |
+|  ap_clk      |                                            | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50] |               10 |             51 |
+|  ap_clk      |                                            | ap_rst                                                                                                                                           |               23 |             84 |
+|  ap_clk      |                                            |                                                                                                                                                  |             1597 |           5872 |
++--------------+--------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 7      |                    11 |
+| 8      |                    12 |
+| 9      |                     8 |
+| 10     |                    12 |
+| 11     |                     4 |
+| 12     |                     5 |
+| 16+    |                     8 |
++--------+-----------------------+
+
+

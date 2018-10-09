@@ -1,0 +1,282 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Fri Apr 13 15:16:29 2018
+| Host         : pedro-H170-Gaming-3 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_drc -file fxpnahid_drc_opted.rpt
+| Design       : fxpnahid
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 47
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| DPOP-1    | Warning  | PREG Output pipelining                              | 2          |
+| REQP-1745 | Advisory | connects_CI_VCC_connects_CYINIT_GND                 | 40         |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP p_x_assign_1_reg_1151_reg input p_x_assign_1_reg_1151_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP p_x_assign_reg_1146_reg input p_x_assign_reg_1146_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP tmp_3_reg_1141_reg input tmp_3_reg_1141_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP tmp_s_reg_1136_reg input tmp_s_reg_1136_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP fxpnahid_mul_mul_dEe_U7/fxpnahid_mul_mul_dEe_DSP48_0_U/p_reg_reg output fxpnahid_mul_mul_dEe_U7/fxpnahid_mul_mul_dEe_DSP48_0_U/p_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP fxpnahid_mul_mul_dEe_U8/fxpnahid_mul_mul_dEe_DSP48_0_U/p_reg_reg output fxpnahid_mul_mul_dEe_U8/fxpnahid_mul_mul_dEe_DSP48_0_U/p_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+REQP-1745#1 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#2 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/NEED_Z_DET.Z_DET/ZERO_DET[4].mc_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#3 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[4].C_MUX.CARRY_MUX_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#4 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/NEED_Z_DET.Z_DET/ZERO_DET[4].mc_CARRY4 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#5 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[27]_carry__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#6 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[16].remd_tmp_reg[17][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#7 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[17].remd_tmp_reg[18][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#8 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[18].remd_tmp_reg[19][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#9 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[19].remd_tmp_reg[20][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#10 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[20].remd_tmp_reg[21][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#11 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[21].remd_tmp_reg[22][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#12 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[22].remd_tmp_reg[23][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#13 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[23].remd_tmp_reg[24][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#14 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[24].remd_tmp_reg[25][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#15 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[25].remd_tmp_reg[26][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#16 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U4/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[26].remd_tmp_reg[27][8]_i_2 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#17 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[27]_carry__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#18 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[16].remd_tmp_reg[17][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#19 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[17].remd_tmp_reg[18][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#20 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[18].remd_tmp_reg[19][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#21 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[19].remd_tmp_reg[20][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#22 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[20].remd_tmp_reg[21][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#23 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[21].remd_tmp_reg[22][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#24 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[22].remd_tmp_reg[23][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#25 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[23].remd_tmp_reg[24][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#26 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[24].remd_tmp_reg[25][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#27 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[25].remd_tmp_reg[26][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#28 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U5/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[26].remd_tmp_reg[27][8]_i_2__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#29 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/cal_tmp[27]_carry__0 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#30 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[16].remd_tmp_reg[17][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#31 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[17].remd_tmp_reg[18][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#32 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[18].remd_tmp_reg[19][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#33 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[19].remd_tmp_reg[20][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#34 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[20].remd_tmp_reg[21][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#35 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[21].remd_tmp_reg[22][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#36 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[22].remd_tmp_reg[23][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#37 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[23].remd_tmp_reg[24][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#38 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[24].remd_tmp_reg[25][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#39 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[25].remd_tmp_reg[26][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+REQP-1745#40 Advisory
+connects_CI_VCC_connects_CYINIT_GND  
+The CARRY4 cell fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/loop[26].remd_tmp_reg[27][8]_i_2__1 has CI tied to VCC and CYINIT tied to GND. The CYINIT connection to GND will take precedence.
+Related violations: <none>
+
+

@@ -1,0 +1,103 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Fri Apr 13 15:29:56 2018
+| Host         : pedro-H170-Gaming-3 running 64-bit Ubuntu 16.04.3 LTS
+| Command      : report_control_sets -verbose -file fxpnahid_control_sets_placed.rpt
+| Design       : fxpnahid
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    41 |
+| Unused register locations in slices containing registers |   117 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1025 |          281 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             273 |           79 |
+| Yes          | No                    | No                     |            1177 |          331 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              56 |           29 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                     Enable Signal                                    |                                                                 Set/Reset Signal                                                                 | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | grp_fxp_sqrt_fu_116/op2_assign_reg_337[3]_i_1_n_2                                    |                                                                                                                                                  |                1 |              4 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/op2_assign_reg_337[3]_i_1__0_n_2                                 |                                                                                                                                                  |                1 |              4 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/ap_CS_fsm_state3                                                 |                                                                                                                                                  |                1 |              4 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/ap_CS_fsm_state3                                                 |                                                                                                                                                  |                1 |              4 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/ap_NS_fsm10_out                                                  |                                                                                                                                                  |                3 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/p_2_reg_86[11]_i_1__0_n_2                                        |                                                                                                                                                  |                4 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/p_2_reg_86[11]_i_1_n_2                                           |                                                                                                                                                  |                4 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/ap_NS_fsm1                                                       |                                                                                                                                                  |                4 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/ap_NS_fsm1                                                       |                                                                                                                                                  |                4 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/ap_NS_fsm10_out                                                  |                                                                                                                                                  |                3 |             12 |
+|  ap_clk      | ap_CS_fsm_state18                                                                    | VyFxp_V_reg_1225[21]                                                                                                                             |               10 |             12 |
+|  ap_clk      | ap_CS_fsm_state18                                                                    | VxFxp_V_reg_1220[21]                                                                                                                             |                9 |             12 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/ap_CS_fsm_state5                                                 | grp_fxp_sqrt_fu_116/i_reg_96[3]_i_1_n_2                                                                                                          |                5 |             16 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/ap_CS_fsm_state5                                                 | grp_fxp_sqrt_fu_121/i_reg_96[3]_i_1__0_n_2                                                                                                       |                5 |             16 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CARRYS_OUT[1]                         |                5 |             16 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/opt_has_pipe.first_q_reg[48]          |                3 |             16 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/norm_dist_skew[1]                     |                5 |             16 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/opt_has_pipe.first_q_reg[48]          |                2 |             16 |
+|  ap_clk      | ap_CS_fsm_state60                                                                    |                                                                                                                                                  |                6 |             19 |
+|  ap_clk      | ap_CS_fsm_state59                                                                    |                                                                                                                                                  |                5 |             20 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/E[0]                                                             |                                                                                                                                                  |                4 |             22 |
+|  ap_clk      | ap_CS_fsm_state17                                                                    |                                                                                                                                                  |                9 |             24 |
+|  ap_clk      | ap_CS_fsm_state23                                                                    |                                                                                                                                                  |                5 |             32 |
+|  ap_clk      | ap_CS_fsm_state21                                                                    |                                                                                                                                                  |                8 |             32 |
+|  ap_clk      | ap_CS_fsm_state2                                                                     |                                                                                                                                                  |                8 |             32 |
+|  ap_clk      | ap_CS_fsm_state22                                                                    |                                                                                                                                                  |               10 |             34 |
+|  ap_clk      | grp_fxp_sqrt_fu_116/ap_CS_fsm_state4                                                 |                                                                                                                                                  |               12 |             40 |
+|  ap_clk      | grp_fxp_sqrt_fu_121/ap_CS_fsm_state4                                                 |                                                                                                                                                  |               11 |             40 |
+|  ap_clk      | ap_CS_fsm_state16                                                                    |                                                                                                                                                  |               10 |             44 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U2/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50] |               13 |             51 |
+|  ap_clk      |                                                                                      | fxpnahid_sitodp_6bkb_U3/fxpnahid_ap_sitodp_7_no_dsp_64_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/RESULT_REG.NORMAL.mant_op_reg[50] |               16 |             51 |
+|  ap_clk      | fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/fxpnahid_udiv_28ncud_div_u_0/E[0] |                                                                                                                                                  |               15 |             60 |
+|  ap_clk      | ap_CS_fsm_state58                                                                    |                                                                                                                                                  |               13 |             60 |
+|  ap_clk      | fxpnahid_udiv_28ncud_U6/fxpnahid_udiv_28ncud_div_U/E[0]                              |                                                                                                                                                  |               20 |             72 |
+|  ap_clk      | ap_CS_fsm_state26                                                                    |                                                                                                                                                  |               14 |             72 |
+|  ap_clk      | ap_CS_fsm_state3                                                                     |                                                                                                                                                  |               29 |             90 |
+|  ap_clk      |                                                                                      | ap_rst                                                                                                                                           |               35 |            107 |
+|  ap_clk      | ap_CS_fsm_state25                                                                    |                                                                                                                                                  |               36 |            117 |
+|  ap_clk      | ap_CS_fsm_state15                                                                    |                                                                                                                                                  |               45 |            126 |
+|  ap_clk      | ap_CS_fsm_state24                                                                    |                                                                                                                                                  |               45 |            153 |
+|  ap_clk      |                                                                                      |                                                                                                                                                  |              286 |           1032 |
++--------------+--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 4      |                     4 |
+| 12     |                     8 |
+| 16+    |                    29 |
++--------+-----------------------+
+
+
